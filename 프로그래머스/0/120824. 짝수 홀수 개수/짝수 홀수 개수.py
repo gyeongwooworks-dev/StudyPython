@@ -1,4 +1,8 @@
 def solution(num_list):
-    answer = [num%2 for num in num_list]
-    return [answer.count(0), answer.count(1)]
-        
+    answer = [0,0]
+    for i in num_list:
+        if i % 2 == 0:
+            answer[0] += 1
+        else:
+            answer[1] += 1
+    return answer
